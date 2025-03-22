@@ -21,6 +21,19 @@ class FishController < ApplicationController
     end
   end
 
+  def destroy
+    @fish = Fish.find_by(id: params[:id])
+
+    if @fish
+      @fish.destroy
+      render json: { message: "User deleted successfully" }, status: :ok
+    else
+      render json: { error: "Fish not found" }, status: :not_found
+    end
+  end
+
+  def show
+  end
 
   private
 
