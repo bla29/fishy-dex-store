@@ -1,24 +1,26 @@
-# README
+# Fishy-Dex-Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fishy-Dex-Store is a collection of API's used to work with the Fishy-Dex front-end application. It enables basic CRUD functionality on the website.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1. Clone the repository:
+   
+   git clone git@github.com:bla29/fishy-dex-store.git
 
-* System dependencies
+2. Install dependencies:
 
-* Configuration
+    bundle install
 
-* Database creation
+3. Set up the database:
 
-* Database initialization
+    rails db:create
+    rails db:migrate
 
-* How to run the test suite
+4. Start the application:
 
-* Services (job queues, cache servers, search engines, etc.)
+    rails server
 
-* Deployment instructions
+## Status
 
-* ...
+    This project is currently in **active development**. I am adding new features and fixing any potential bugs.
