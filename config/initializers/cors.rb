@@ -1,7 +1,7 @@
 # config/initializers/cors.rb
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://fishy-dex-production.up.railway.app/"  # Change this to the URL of your frontend
+    origins "https://fishy-dex-production.up.railway.app"  # Change this to the URL of your frontend
 
     resource "*",
       headers: :any,
