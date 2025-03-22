@@ -7,7 +7,7 @@ class FishController < ApplicationController
     if @fish
       render json: @fish
     else
-      render json: { error: "Fish not found" }, status: 404
+      render json: { error: "Fish not found" }, status: :not_found
     end
   end
   def create
@@ -17,7 +17,7 @@ class FishController < ApplicationController
       render json: @fish
       @fish.save
     else
-      render json: { error: "Fish could not be created." }, status: 422
+      render json: { error: "Fish could not be created." }, status: :bad_request
     end
   end
 
@@ -32,7 +32,14 @@ class FishController < ApplicationController
     end
   end
 
-  def show
+  def update
+    @fish = Fish.find_by(id: params[:id])
+
+    if @fish.update(fish_params)
+      render json: { message: "Fish updated successfully" }, status: :ok
+    else
+      render json: { error: "Fish could not be updated" }, status: :unprocessable_entity
+    end
   end
 
   private
