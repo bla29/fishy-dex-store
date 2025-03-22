@@ -1,6 +1,4 @@
 class FishController < ApplicationController
-  protect_from_forgery with: :exception, unless: -> { request.format.json? }
-  # validates :species, :weight, :picture, presence: true
   def index
     @fish = Fish.all
 
