@@ -21,6 +21,15 @@ Fishy-Dex-Store is a collection of API's used to work with the Fishy-Dex front-e
 
     rails server
 
+## Testing
+
+    I've currently written tests to validate model validations in fish.rb, as well as functional tests for fish_controller.rb to ensure that all API's are working.
+    
+    To run test:
+
+    bin/rails test
+
 ## Status
 
     This project is currently in **active development**. I am adding new features and fixing any potential bugs.
+

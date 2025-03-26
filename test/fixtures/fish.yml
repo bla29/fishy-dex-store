@@ -4,8 +4,14 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one: 
+  id: 10
+  species: "Striped Bass"
+  weight: 15.5
+  date: "7/5/12"
+
+two: 
+  id: 11
+  species: "Trevally"
+  weight: 6.2
+  date: "5/5/14"
