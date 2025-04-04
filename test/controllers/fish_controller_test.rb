@@ -12,12 +12,12 @@ class FishControllerTest < ActionDispatch::IntegrationTest
    end
 
    test "should update" do
-    patch fish_index_url(Fish.last), params: { species: "Brook Trout", weight: 1.5, date: "12/10/12" }, as: :json
+    patch fish_url(Fish.last.id), params: { species: "Brook Trout", weight: 1.5, date: "12/10/12" }, as: :json
     assert_response :success
    end
 
    test "should delete" do
-    delete fish_index_url(Fish.last), as: :json
+    delete fish_url(Fish.last.id), as: :json
     assert_response :success
    end
 end
