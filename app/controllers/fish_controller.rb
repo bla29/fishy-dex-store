@@ -43,6 +43,6 @@ class FishController < ApplicationController
   private
 
   def fish_params
-    params.require(:fish).permit(:species, :weight, :date)
+    params.permit(:species, :weight, :date)
   end
 end
